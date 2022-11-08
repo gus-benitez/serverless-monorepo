@@ -1,0 +1,28 @@
+{
+  "name": "serverless-monorepo",
+  "version": "1.0.0",
+  "description": "This app is structured as a monorepo, all the different packages are in the same GitHub repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gus-benitez/serverless-monorepo.git"
+  },
+  "keywords": [
+    "serverless",
+    "monorepo",
+    "services",
+    "backend"
+  ],
+  "author": "https://github.com/gus-benitez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gus-benitez/serverless-monorepo/issues"
+  },
+  "homepage": "https://github.com/gus-benitez/serverless-monorepo#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
