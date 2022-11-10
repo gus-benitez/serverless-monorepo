@@ -1,9 +1,11 @@
 {
-  "name": "serverless-monorepo",
+  "name": "kk-tharid",
   "version": "1.0.0",
   "description": "This app is structured as a monorepo, all the different packages are in the same GitHub repository.",
   "main": "index.js",
   "scripts": {
+    "dev": "serverless offline",
+    "deploy": "serverless deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +25,12 @@
   },
   "homepage": "https://github.com/gus-benitez/serverless-monorepo#readme",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.108",
+    "serverless-esbuild": "^1.33.1",
+    "serverless-offline": "^11.3.0",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7"
   }
 }

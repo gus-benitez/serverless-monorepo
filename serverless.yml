@@ -1,0 +1,37 @@
+service: 'kk-tharid'
+# useDotenv: true
+# deploymentBucket:
+#   name: kk-sls-deployment-bucket
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+
+package:
+  individually: true
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: me-south-1
+  stage: 'staging'
+
+functions:
+  back_graphql:
+    handler: src/functions/back_graphql/index.handler
+    events:
+      - http:
+          method: ANY
+          path: back-graphql/
+      - http:
+          method: ANY
+          path: 'back-graphql/{proxy+}'
+  back_restapi:
+    handler: src/functions/back_restapi/index.handler
+    events:
+      - http:
+          method: GET
+          path: back-restapi/
+      - http:
+          method: ANY
+          path: 'back-restapi/{proxy+}'
